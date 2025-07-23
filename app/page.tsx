@@ -1,103 +1,279 @@
-import Image from "next/image";
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { 
+  FadeInUp, 
+  FadeInLeft, 
+  FadeInRight, 
+  ScaleIn, 
+  StaggerContainer, 
+  StaggerItem,
+  PageTransition 
+} from "@/components/animations"
+import { 
+  Recycle, 
+  Flame, 
+  Sun, 
+  Droplets, 
+  BookOpen, 
+  CheckCircle,
+  Leaf,
+  Users,
+  Target,
+  Award,
+  Globe
+} from "lucide-react"
+
+const coreImpactAreas = [
+  {
+    icon: Recycle,
+    title: "Circular Economy Solutions",
+    description: "Closing the loop in agro-industrial value chains by turning waste into valuable resources—reducing costs, boosting productivity, and minimizing environmental impact."
+  },
+  {
+    icon: Flame,
+    title: "Biomass Gasification & Biochar",
+    description: "Converting agricultural residues into clean syngas for power and biochar for soil restoration, enhancing yields while cutting fossil fuel dependence."
+  },
+  {
+    icon: Sun,
+    title: "Renewable Energy Systems",
+    description: "Designing and deploying solar PV and hybrid solutions that deliver reliable, affordable, and low-carbon power for farms, agro-processors, and rural industries."
+  },
+  {
+    icon: Droplets,
+    title: "Green Hydrogen for Agriculture & Industry",
+    description: "Integrating hydrogen production from renewable energy to power processes, enable green fertilizer production, and decarbonize logistics."
+  },
+  {
+    icon: BookOpen,
+    title: "Capacity Building & Training",
+    description: "Equipping communities, cooperatives, and enterprises with the knowledge and skills to adopt and scale sustainable practices, with a strong focus on gender inclusion."
+  }
+]
+
+const whyChooseUs = [
+  "Proven track record in agricultural transformation and project delivery.",
+  "Deep understanding of Nigeria's agro-industrial challenges—and solutions that work.",
+  "Hands-on experience with renewable energy and hydrogen systems.",
+  "Commitment to empowering women and youth in green value chains.",
+  "Partnerships with leading universities, technical partners, and government agencies."
+]
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <PageTransition>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-blue-50 to-yellow-50 dark:from-green-950 dark:via-blue-950 dark:to-yellow-950">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwNTk2NjkiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-40"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            <FadeInUp delay={0.2}>
+              <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
+                🌿 Transforming Agriculture and Industry through Clean Technologies
+              </Badge>
+            </FadeInUp>
+            
+            <FadeInUp delay={0.4}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+                Empowering Africa&#39;s{" "}
+                <span className="text-green-600">Agro-Industry</span> with{" "}
+                <span className="text-blue-600">Clean Solutions</span>
+              </h1>
+            </FadeInUp>
+            
+            <FadeInUp delay={0.6}>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+                At Dara-Manihot Industries & Farms, we deliver innovative, scalable, and sustainable solutions 
+                that reshape how agriculture and industry operate—creating resilient communities, competitive 
+                businesses, and a greener future for Nigeria and beyond.
+              </p>
+            </FadeInUp>
+            
+            <FadeInUp delay={0.8}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6">
+                  Explore Our Services
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-green-600 text-green-600 hover:bg-green-50">
+                  View Our Projects
+                </Button>
+              </div>
+            </FadeInUp>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Who We Are Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FadeInUp>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  Who We Are
+                </h2>
+                <div className="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+              </div>
+            </FadeInUp>
+            
+            <FadeInUp delay={0.2}>
+              <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                Dara-Manihot Industries & Farms is a leading Nigerian enterprise redefining sustainable 
+                agriculture and industry through advanced clean technologies. We combine decades of 
+                agricultural expertise with cutting-edge renewable energy, green hydrogen systems, and 
+                circular economy practices to unlock new opportunities for farmers, processors, and industries.
+              </p>
+            </FadeInUp>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Impact Areas */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeInUp>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Our Core Impact Areas
+              </h2>
+              <div className="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                We focus on five key areas that drive sustainable transformation across agriculture and industry
+              </p>
+            </div>
+          </FadeInUp>
+          
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coreImpactAreas.map((area, index) => (
+              <StaggerItem key={index}>
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-l-4 border-l-green-600">
+                  <CardHeader>
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-3 bg-green-100 dark:bg-green-900 rounded-lg">
+                        <area.icon className="h-6 w-6 text-green-600" />
+                      </div>
+                      <CardTitle className="text-xl">{area.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed">
+                      {area.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <FadeInLeft>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  Why Choose Dara-Manihot?
+                </h2>
+                <div className="w-24 h-1 bg-green-600 mb-8"></div>
+                <div className="space-y-4">
+                  {whyChooseUs.map((reason, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-6 w-6 text-green-600 mt-0.5 flex-shrink-0" />
+                      <p className="text-muted-foreground leading-relaxed">{reason}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeInLeft>
+            
+            <FadeInRight>
+              <div className="grid grid-cols-2 gap-6">
+                <ScaleIn delay={0.2}>
+                  <Card className="text-center p-6 bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800">
+                    <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-foreground mb-2">500+</h3>
+                    <p className="text-sm text-muted-foreground">Farmers Empowered</p>
+                  </Card>
+                </ScaleIn>
+                
+                <ScaleIn delay={0.4}>
+                  <Card className="text-center p-6 bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
+                    <Target className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-foreground mb-2">50+</h3>
+                    <p className="text-sm text-muted-foreground">Projects Delivered</p>
+                  </Card>
+                </ScaleIn>
+                
+                <ScaleIn delay={0.6}>
+                  <Card className="text-center p-6 bg-yellow-50 dark:bg-yellow-950 border-yellow-200 dark:border-yellow-800">
+                    <Award className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-foreground mb-2">10+</h3>
+                    <p className="text-sm text-muted-foreground">Years Experience</p>
+                  </Card>
+                </ScaleIn>
+                
+                <ScaleIn delay={0.8}>
+                  <Card className="text-center p-6 bg-purple-50 dark:bg-purple-950 border-purple-200 dark:border-purple-800">
+                    <Globe className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-foreground mb-2">5</h3>
+                    <p className="text-sm text-muted-foreground">States Reached</p>
+                  </Card>
+                </ScaleIn>
+              </div>
+            </FadeInRight>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <FadeInUp>
+              <Leaf className="h-16 w-16 mx-auto mb-8 opacity-80" />
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                Our Vision for the Future
+              </h2>
+              <p className="text-xl leading-relaxed mb-8 opacity-90">
+                We envision an Africa where farms and factories thrive with clean, affordable energy; 
+                agricultural waste becomes a resource, not a burden; and farmers and entrepreneurs gain 
+                the tools to lead in a climate-smart economy. At Dara-Manihot, we are proud to stand 
+                at the forefront of this transformation.
+              </p>
+            </FadeInUp>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeInUp>
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Ready to Learn More?
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Join us in transforming agriculture and industry through sustainable, innovative solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6">
+                  Explore Our Services
+                </Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-green-600 text-green-600 hover:bg-green-50">
+                  Contact Us Today
+                </Button>
+              </div>
+            </div>
+          </FadeInUp>
+        </div>
+      </section>
+    </PageTransition>
+  )
 }
