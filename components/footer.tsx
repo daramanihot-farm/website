@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { Leaf, Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -10,7 +11,13 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-green-600" />
+              <Image 
+                src="/logo1.svg" 
+                alt="Dara-Manihot Logo" 
+                width={32} 
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="font-bold text-xl">Dara-Manihot</span>
             </div>
             <p className="text-sm text-muted-foreground">

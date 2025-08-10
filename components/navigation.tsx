@@ -4,8 +4,9 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Leaf, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 import { motion, AnimatePresence } from "motion/react"
 
 const navigationItems = [
@@ -24,7 +25,13 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Leaf className="h-8 w-8 text-green-600" />
+            <Image 
+              src="/logo1.svg" 
+              alt="Dara-Manihot Logo" 
+              width={32} 
+              height={32}
+              className="h-8 w-8"
+            />
             <span className="font-bold text-xl text-foreground">
               Dara-Manihot
             </span>
