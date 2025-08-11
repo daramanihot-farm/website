@@ -163,7 +163,7 @@ export default function ProjectsPage() {
 
             <FadeInUp delay={0.4}>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Discover how we&#39;re transforming agriculture across Nigeria
+                Discover how we're transforming agriculture across Nigeria
                 through innovative projects, strategic partnerships, and
                 community-focused initiatives that create lasting change.
               </p>
@@ -287,8 +287,8 @@ export default function ProjectsPage() {
                 </h2>
                 <div className="w-24 h-1 bg-green-600 mb-8"></div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We&#39;re committed to creating measurable, sustainable impact
-                  that transforms communities and drives Nigeria&#39;s green
+                  We're committed to creating measurable, sustainable impact
+                  that transforms communities and drives Nigeria's green
                   transition forward.
                 </p>
               </div>
@@ -366,8 +366,8 @@ export default function ProjectsPage() {
                 Partner With Us
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Join us in building a sustainable future for Nigeria&#39;s
-                agriculture. Let&#39;s discuss how we can work together to
+                Join us in building a sustainable future for Nigeria's
+                agriculture. Let's discuss how we can work together to
                 create lasting impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
