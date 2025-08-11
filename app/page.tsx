@@ -93,7 +93,7 @@ export default function Home() {
 
             <FadeInUp delay={0.4}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-                Empowering Africa&#39;s{' '}
+                Empowering Africa's{' '}
                 <span className="text-green-600">Agro-Industry</span> with{' '}
                 <span className="text-blue-600">Clean Solutions</span>
               </h1>
