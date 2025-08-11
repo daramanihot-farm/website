@@ -28,9 +28,9 @@ export function Navigation() {
             <Image 
               src="/logo1.svg" 
               alt="Dara-Manihot Logo" 
-              width={48} 
-              height={48}
-              className="h-12 w-12"
+              width={80} 
+              height={80}
+              className="h-20 w-20"
             />
             <span className="font-bold text-xl text-foreground">
               Dara-Manihot

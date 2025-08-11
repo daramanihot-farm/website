@@ -14,9 +14,9 @@ export function Footer() {
               <Image 
                 src="/logo1.svg" 
                 alt="Dara-Manihot Logo" 
-                width={40} 
-                height={40}
-                className="h-10 w-10"
+                width={64} 
+                height={64}
+                className="h-16 w-16"
               />
               <span className="font-bold text-xl">Dara-Manihot</span>
             </div>
