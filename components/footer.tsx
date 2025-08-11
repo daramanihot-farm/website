@@ -1,84 +1,91 @@
-import Link from "next/link"
-import { Leaf, Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react"
-import { Separator } from "@/components/ui/separator"
+
+'use client'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { Separator } from '@/components/ui/separator'
+import { MapPin, Phone, Mail, Linkedin, Twitter, Facebook } from 'lucide-react'
+import { COMPANY_INFO, NAVIGATION_LINKS, SOCIAL_LINKS } from '@/lib/constants'
 
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="bg-muted/50 border-t">
+    <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-green-600" />
-              <span className="font-bold text-xl">Dara-Manihot</span>
+            <div className="flex items-center space-x-3">
+              <Image 
+                src="/logo1.svg" 
+                alt={`${COMPANY_INFO.name} Logo`} 
+                width={64} 
+                height={64}
+                className="h-16 w-16"
+              />
+              <span className="font-bold text-xl">{COMPANY_INFO.shortName}</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Transforming Agriculture and Industry through Clean Technologies, 
-              Circular Economy, and Renewable Energy Solutions.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {COMPANY_INFO.description}
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-green-600 transition-colors">
+              <Link href={SOCIAL_LINKS.linkedin} className="text-muted-foreground hover:text-foreground">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-green-600 transition-colors">
+              <Link href={SOCIAL_LINKS.twitter} className="text-muted-foreground hover:text-foreground">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-green-600 transition-colors">
-                <Instagram className="h-5 w-5" />
+              <Link href={SOCIAL_LINKS.facebook} className="text-muted-foreground hover:text-foreground">
+                <Facebook className="h-5 w-5" />
               </Link>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/" className="text-muted-foreground hover:text-green-600 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-muted-foreground hover:text-green-600 transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-muted-foreground hover:text-green-600 transition-colors">
-                  Projects
-                </Link>
-              </li>
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {NAVIGATION_LINKS.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Our Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">Circular Economy Programs</li>
-              <li className="text-muted-foreground">Biomass Gasification</li>
-              <li className="text-muted-foreground">Renewable Energy Systems</li>
-              <li className="text-muted-foreground">Green Hydrogen Integration</li>
-              <li className="text-muted-foreground">Capacity Building</li>
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Our Services</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>Renewable Energy Systems</li>
+              <li>Circular Economy Solutions</li>
+              <li>Green Hydrogen Production</li>
+              <li>Capacity Building</li>
+              <li>Biomass Gasification</li>
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="font-semibold">Contact Us</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-green-600" />
-                <span className="text-muted-foreground">info@dara-manihot.ng</span>
+          <div>
+            <h3 className="font-semibold text-foreground mb-4">Contact Us</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2 text-sm">
+                <MapPin className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">{COMPANY_INFO.address}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-green-600" />
-                <span className="text-muted-foreground">+234-XXX-XXXX</span>
+              <div className="flex items-center space-x-2 text-sm">
+                <Phone className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">{COMPANY_INFO.phone}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-green-600" />
-                <span className="text-muted-foreground">Nigeria</span>
+              <div className="flex items-center space-x-2 text-sm">
+                <Mail className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">{COMPANY_INFO.email}</span>
               </div>
             </div>
           </div>
@@ -86,15 +93,15 @@ export function Footer() {
 
         <Separator className="my-8" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Dara-Manihot Industries & Farms. All rights reserved.
+            © {currentYear} {COMPANY_INFO.name}. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm">
-            <Link href="#" className="text-muted-foreground hover:text-green-600 transition-colors">
+          <div className="flex space-x-6 mt-4 sm:mt-0">
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-green-600 transition-colors">
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
               Terms of Service
             </Link>
           </div>
