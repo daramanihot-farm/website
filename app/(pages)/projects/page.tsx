@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button'
 import {
   Card,
-  CardContent,
   CardDescription,
   CardTitle,
 } from '@/components/ui/card'
@@ -29,7 +28,6 @@ import {
   Handshake,
   Mail,
   Phone,
-  MapPin,
 } from 'lucide-react'
 
 const keyProjects = [
