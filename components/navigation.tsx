@@ -26,8 +26,8 @@ export function Navigation() {
             <Image 
               src="/logo1.svg" 
               alt={`${COMPANY_INFO.name} Logo`} 
-              width={80} 
-              height={80}
+              width={150} 
+              height={150}
               className="h-20 w-20"
               priority
             />

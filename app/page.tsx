@@ -6,12 +6,10 @@ import {
   CheckCircle,
   Droplets,
   Flame,
-  Globe,
   Leaf,
   Recycle,
   Sun,
   Target,
-  Users,
 } from 'lucide-react'
 import Link from 'next/link'
 import {
@@ -69,7 +67,7 @@ const coreImpactAreas = [
 
 const whyChooseUs = [
   'Proven track record in agricultural transformation and project delivery.',
-  "Deep understanding of Nigeria's agro-industrial challenges—and solutions that work.",
+  'Deep understanding of Nigeria&#39;s agro-industrial challenges—and solutions that work.',
   'Hands-on experience with renewable energy and hydrogen systems.',
   'Commitment to empowering women and youth in green value chains.',
   'Partnerships with leading universities, technical partners, and government agencies.',
@@ -93,7 +91,7 @@ export default function Home() {
 
             <FadeInUp delay={0.4}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-                Empowering Africa's{' '}
+                Empowering Africa&#39;s{' '}
                 <span className="text-green-600">Agro-Industry</span> with{' '}
                 <span className="text-blue-600">Clean Solutions</span>
               </h1>
@@ -149,7 +147,7 @@ export default function Home() {
 
             <FadeInUp delay={0.2}>
               <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                Dara-Manihot Industries & Farms is a leading Nigerian enterprise
+                Dara-Manihot Industries &amp; Farms is a leading Nigerian enterprise
                 redefining sustainable agriculture and industry through advanced
                 clean technologies. We combine decades of agricultural expertise
                 with cutting-edge renewable energy, green hydrogen systems, and
@@ -228,7 +226,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6">
                 <ScaleIn delay={0.2}>
                   <Card className="text-center p-6 bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800">
-                    <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                    <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-2">
                       500+
                     </h3>
@@ -240,7 +238,7 @@ export default function Home() {
 
                 <ScaleIn delay={0.4}>
                   <Card className="text-center p-6 bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
-                    <Target className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                    <CheckCircle className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-2">
                       50+
                     </h3>
@@ -264,7 +262,7 @@ export default function Home() {
 
                 <ScaleIn delay={0.8}>
                   <Card className="text-center p-6 bg-purple-50 dark:bg-purple-950 border-purple-200 dark:border-purple-800">
-                    <Globe className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                    <Leaf className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-2">
                       5
                     </h3>

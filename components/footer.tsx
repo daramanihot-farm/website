@@ -20,8 +20,8 @@ export function Footer() {
               <Image 
                 src="/logo1.svg" 
                 alt={`${COMPANY_INFO.name} Logo`} 
-                width={64} 
-                height={64}
+                width={80} 
+                height={80}
                 className="h-16 w-16"
               />
               <span className="font-bold text-xl">{COMPANY_INFO.shortName}</span>
