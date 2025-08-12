@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Configure for Replit environment
+  
   experimental: {
     // Disable features that might conflict with Replit's filesystem
     optimizePackageImports: ["lucide-react"]
