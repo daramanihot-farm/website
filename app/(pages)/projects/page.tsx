@@ -1,4 +1,3 @@
-
 'use client'
 
 import { Button } from '@/components/ui/button'
@@ -287,8 +286,8 @@ export default function ProjectsPage() {
                 </h2>
                 <div className="w-24 h-1 bg-green-600 mb-8"></div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We're committed to creating measurable, sustainable impact
-                  that transforms communities and drives Nigeria's green
+                  We&apos;re committed to creating measurable, sustainable impact
+                  that transforms communities and drives Nigeria&apos;s green
                   transition forward.
                 </p>
               </div>
