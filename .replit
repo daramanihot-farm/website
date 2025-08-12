@@ -22,3 +22,20 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run dev"
+
+[[workflows.workflow]]
+name = "Type Check & Lint"
+author = 46304423
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx tsc --noEmit"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eslint . --ext .ts,.tsx"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx biome check ."
