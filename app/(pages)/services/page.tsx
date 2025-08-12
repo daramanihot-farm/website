@@ -2,18 +2,14 @@
 'use client'
 
 import {
-  Award,
   BookOpen,
   CheckCircle,
   Droplets,
   Flame,
-  Globe,
   Leaf,
   Lightbulb,
   Recycle,
   Sun,
-  Users,
-  Zap,
 } from 'lucide-react'
 import {
   FadeInLeft,

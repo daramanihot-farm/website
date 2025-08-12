@@ -147,7 +147,7 @@ export default function ProjectsPage() {
           <div className="text-center max-w-4xl mx-auto">
             <FadeInUp>
               <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
-                🚀 Building Tomorrow's Sustainable Agriculture Today
+                🚀 Building Tomorrow&apos;s Sustainable Agriculture Today
               </Badge>
             </FadeInUp>
 
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
 
             <FadeInUp delay={0.4}>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Discover how we're transforming agriculture across Nigeria
+                Discover how we&apos;re transforming agriculture across Nigeria
                 through innovative projects, strategic partnerships, and
                 community-focused initiatives that create lasting change.
               </p>
@@ -363,8 +363,8 @@ export default function ProjectsPage() {
                 Partner With Us
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Join us in building a sustainable future for Nigeria's
-                agriculture. Let's discuss how we can work together to
+                Join us in building a sustainable future for Nigeria&apos;s
+                agriculture. Let&apos;s discuss how we can work together to
                 create lasting impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
