@@ -40,7 +40,6 @@ const keyProjects = [
     details:
       'Our role includes designing circular business models for green ammonia production, developing training programs, and supporting regulatory compliance to make sustainable energy a reality for farmers and agro-processors.',
     status: 'Active',
-    impact: '500+ farmers trained',
   },
   {
     icon: Recycle,
