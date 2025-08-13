@@ -1,7 +1,6 @@
 'use client'
 
 import {
-  Award,
   BookOpen,
   CheckCircle,
   Droplets,
@@ -9,7 +8,6 @@ import {
   Leaf,
   Recycle,
   Sun,
-  Target,
 } from 'lucide-react'
 import Link from 'next/link'
 import {
@@ -99,10 +97,10 @@ export default function Home() {
 
             <FadeInUp delay={0.6}>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                At Dara-Manihot Industries & Farms, we deliver innovative,
-                scalable, and sustainable solutions that reshape how agriculture
-                and industry operate—creating resilient communities, competitive
-                businesses, and a greener future for Nigeria and beyond.
+                At Dara-Manihot Industries & Farms, we&apos;re transforming
+                agriculture and industry—creating resilient communities,
+                competitive businesses, and a greener future for Nigeria and
+                beyond.
               </p>
             </FadeInUp>
 
@@ -147,12 +145,12 @@ export default function Home() {
 
             <FadeInUp delay={0.2}>
               <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                Dara-Manihot Industries &amp; Farms is a leading Nigerian enterprise
-                redefining sustainable agriculture and industry through advanced
-                clean technologies. We combine decades of agricultural expertise
-                with cutting-edge renewable energy, green hydrogen systems, and
-                circular economy practices to unlock new opportunities for
-                farmers, processors, and industries.
+                Dara-Manihot Industries &amp; Farms is a leading Nigerian
+                enterprise redefining sustainable agriculture and industry
+                through advanced clean technologies. We combine decades of
+                agricultural expertise with cutting-edge renewable energy, green
+                hydrogen systems, and circular economy practices to unlock new
+                opportunities for farmers, processors, and industries.
               </p>
             </FadeInUp>
           </div>
@@ -250,7 +248,7 @@ export default function Home() {
 
                 <ScaleIn delay={0.6}>
                   <Card className="text-center p-6 bg-yellow-50 dark:bg-yellow-950 border-yellow-200 dark:border-yellow-800">
-                    <Award className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+                    <CheckCircle className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-foreground mb-2">
                       10+
                     </h3>
