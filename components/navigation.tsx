@@ -22,13 +22,13 @@ export function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-4">
             <Image 
               src="/logo1.svg" 
               alt={`${COMPANY_INFO.name} Logo`} 
-              width={150} 
-              height={150}
-              className="h-20 w-20"
+              width={200} 
+              height={200}
+              className="h-40 w-40 md:h-32 md:w-32 sm:h-20 sm:w-20" // 160px desktop, 128px tablet, 80px mobile
               priority
             />
             <span className="font-bold text-xl text-foreground">
