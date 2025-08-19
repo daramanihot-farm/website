@@ -120,9 +120,9 @@ export default function AboutPage() {
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     A visionary leader with over 15 years of experience in agricultural innovation and sustainable development. Mr. Adekunle founded Dara-Manihot with the mission to revolutionize Africa's agricultural sector through clean technologies and circular economy principles.
                   </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  {/* <p className="text-lg text-muted-foreground leading-relaxed">
                     [This section will be updated with detailed biography and achievements of Mr. Olusile Adekunle]
-                  </p>
+                  </p> */}
                   
                   <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                     <Badge variant="outline" className="text-green-600 border-green-600">Agricultural Innovation</Badge>
