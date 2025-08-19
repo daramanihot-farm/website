@@ -1,4 +1,3 @@
-
 export const COMPANY_INFO = {
   name: 'Dara-Manihot Industries & Farms',
   shortName: 'Dara-Manihot',
