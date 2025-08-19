@@ -1,3 +1,4 @@
+
 'use client'
 
 import {
@@ -20,7 +21,7 @@ import {
   StaggerItem,
 } from '@/components/animations'
 import { Badge } from '@/components/ui/badge'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -318,13 +319,15 @@ export default function Home() {
                 >
                   Explore Our Services
                 </Link>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-6 border-green-600 text-green-600 hover:bg-green-50"
+                <Link
+                  href="/contact"
+                  className={cn(
+                    buttonVariants({ variant: 'outline', size: 'lg' }),
+                    'text-lg px-8 py-6 border-green-600 text-green-600 hover:bg-green-50',
+                  )}
                 >
                   Contact Us Today
-                </Button>
+                </Link>
               </div>
             </div>
           </FadeInUp>

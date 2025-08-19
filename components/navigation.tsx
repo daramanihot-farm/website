@@ -47,9 +47,11 @@ export function Navigation() {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-green-600 hover:bg-green-700">
-              Get Started
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-green-600 hover:bg-green-700">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,9 +81,11 @@ export function Navigation() {
                 </Link>
               ))}
               <div className="px-3 pt-2">
-                <Button className="w-full bg-green-600 hover:bg-green-700">
-                  Get Started
-                </Button>
+                <Link href="/contact" className="block">
+                  <Button className="w-full bg-green-600 hover:bg-green-700">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
