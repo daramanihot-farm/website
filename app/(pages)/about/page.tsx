@@ -1,7 +1,6 @@
 
 'use client'
 
-import Image from 'next/image'
 import { 
   FadeInUp, 
   FadeInLeft, 
@@ -13,7 +12,6 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { 
-  CheckCircle, 
   Users, 
   Award, 
   Target, 
@@ -22,7 +20,7 @@ import {
   Globe,
   Leaf
 } from 'lucide-react'
-import { COMPANY_INFO, CORE_VALUES } from '@/lib/constants'
+import { CORE_VALUES } from '@/lib/constants'
 
 const companyMilestones = [
   {
@@ -80,7 +78,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-green-50 via-blue-50 to-yellow-50 dark:from-green-950 dark:via-blue-950 dark:to-yellow-950">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwNTk2NjkiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-40"></div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <FadeInUp delay={0.2}>
@@ -97,7 +95,7 @@ export default function AboutPage() {
 
             <FadeInUp delay={0.6}>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                For over a decade, we've been at the forefront of transforming Africa's agricultural landscape through innovative clean technologies and sustainable practices.
+                For over a decade, we&apos;ve been at the forefront of transforming Africa&apos;s agricultural landscape through innovative clean technologies and sustainable practices.
               </p>
             </FadeInUp>
           </div>
@@ -114,16 +112,16 @@ export default function AboutPage() {
                   Meet Our Founder & CEO
                 </h2>
                 <div className="w-24 h-1 bg-green-600 mx-auto lg:mx-0 mb-8"></div>
-                
+
                 <div className="space-y-6">
                   <h3 className="text-2xl font-semibold text-green-600">Mr. Olusile Adekunle</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    A visionary leader with over 15 years of experience in agricultural innovation and sustainable development. Mr. Adekunle founded Dara-Manihot with the mission to revolutionize Africa's agricultural sector through clean technologies and circular economy principles.
+                    A visionary leader with over 15 years of experience in agricultural innovation and sustainable development. Mr. Adekunle founded Dara-Manihot with the mission to revolutionize Africa&apos;s agricultural sector through clean technologies and circular economy principles.
                   </p>
                   {/* <p className="text-lg text-muted-foreground leading-relaxed">
                     [This section will be updated with detailed biography and achievements of Mr. Olusile Adekunle]
                   </p> */}
-                  
+
                   <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                     <Badge variant="outline" className="text-green-600 border-green-600">Agricultural Innovation</Badge>
                     <Badge variant="outline" className="text-blue-600 border-blue-600">Clean Technology</Badge>
@@ -175,7 +173,7 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base leading-relaxed text-center text-foreground">
-                    To transform Africa's agricultural and industrial sectors through innovative clean technologies, 
+                    To transform Africa&apos;s agricultural and industrial sectors through innovative clean technologies, 
                     creating sustainable value chains that empower communities, enhance productivity, and protect 
                     our environment for future generations.
                   </CardDescription>
@@ -193,7 +191,7 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base leading-relaxed text-center text-foreground">
-                    To be Africa's leading catalyst for sustainable agro-industrial transformation, where farms 
+                    To be Africa&apos;s leading catalyst for sustainable agro-industrial transformation, where farms 
                     and factories thrive with clean energy, waste becomes valuable resources, and communities 
                     lead the transition to a climate-smart economy.
                   </CardDescription>
@@ -348,7 +346,7 @@ export default function AboutPage() {
                 Join Us in Transforming Agriculture
               </h2>
               <p className="text-xl leading-relaxed mb-8 opacity-90">
-                Together, we can build a sustainable future where clean technologies power Africa's agricultural transformation. Let's create lasting impact for communities, businesses, and our planet.
+                Together, we can build a sustainable future where clean technologies power Africa&apos;s agricultural transformation. Let&apos;s create lasting impact for communities, businesses, and our planet.
               </p>
             </FadeInUp>
           </div>

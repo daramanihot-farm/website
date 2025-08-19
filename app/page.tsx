@@ -1,3 +1,4 @@
+
 'use client'
 
 import {
@@ -20,7 +21,7 @@ import {
   StaggerItem,
 } from '@/components/animations'
 import { Badge } from '@/components/ui/badge'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import {
   Card,
   CardContent,
