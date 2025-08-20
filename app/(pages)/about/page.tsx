@@ -21,6 +21,7 @@ import {
   Leaf
 } from 'lucide-react'
 import { CORE_VALUES } from '@/lib/constants'
+import Image from 'next/image'
 
 const companyMilestones = [
   {
@@ -135,9 +136,16 @@ export default function AboutPage() {
               <div className="flex justify-center">
                 <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950 border-green-200 dark:border-green-800">
                   <div className="text-center">
-                    {/* Placeholder for founder's image */}
-                    <div className="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900 dark:to-blue-900 rounded-full flex items-center justify-center border-4 border-green-200 dark:border-green-700">
-                      <Users className="h-24 w-24 text-green-600" />
+                    {/* CEO's actual image */}
+                    <div className="w-64 h-64 mx-auto mb-6 relative rounded-full overflow-hidden border-4 border-green-200 dark:border-green-700 shadow-lg">
+                      <Image
+                        src="/ceo.jpg"
+                        alt="Mr. Olusile Adekunle - Founder & CEO"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 256px, 256px"
+                        priority
+                      />
                     </div>
                     <h4 className="text-xl font-semibold text-foreground mb-2">Mr. Olusile Adekunle</h4>
                     <p className="text-muted-foreground">Founder & CEO</p>
