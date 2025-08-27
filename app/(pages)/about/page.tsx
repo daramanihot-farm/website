@@ -147,7 +147,7 @@ export default function AboutPage() {
                         priority
                       />
                     </div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">Mr. Olusile Adekunle</h4>
+                    {/* <h4 className="text-xl font-semibold text-foreground mb-2">Mr. Olusile Adekunle</h4> */}
                     <p className="text-muted-foreground">Founder & CEO</p>
                     <p className="text-sm text-muted-foreground mt-2">Dara-Manihot Industries & Farms</p>
                   </div>
