@@ -40,3 +40,6 @@ args = "npx eslint . --ext .ts,.tsx"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npx biome check ."
+
+[agent]
+expertMode = true
