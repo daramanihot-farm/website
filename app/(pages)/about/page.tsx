@@ -21,6 +21,7 @@ import {
   Leaf
 } from 'lucide-react'
 import { CORE_VALUES } from '@/lib/constants'
+import Image from 'next/image'
 
 const companyMilestones = [
   {
@@ -102,7 +103,41 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder/CEO Section */}
+      {/* Leadership Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <FadeInUp>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Our Leadership
+              </h2>
+              <div className="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+              
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Dara-Manihot Industries & Farms is guided by visionary leadership with over 15 years of experience 
+                  in agricultural innovation and sustainable development. Our company was founded with the mission to 
+                  revolutionize Africa&apos;s agricultural sector through clean technologies and circular economy principles.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our leadership team brings together decades of expertise in agricultural transformation, renewable energy systems, 
+                  and community development, driving our commitment to creating sustainable value chains across Nigeria and Africa.
+                </p>
+
+                <div className="flex flex-wrap gap-2 justify-center mt-8">
+                  <Badge variant="outline" className="text-green-600 border-green-600">Agricultural Innovation</Badge>
+                  <Badge variant="outline" className="text-blue-600 border-blue-600">Clean Technology</Badge>
+                  <Badge variant="outline" className="text-yellow-600 border-yellow-600">Leadership</Badge>
+                  <Badge variant="outline" className="text-purple-600 border-purple-600">Sustainability</Badge>
+                </div>
+              </div>
+            </FadeInUp>
+          </div>
+        </div>
+      </section>
+
+      {/* Commented out CEO image section for future use */}
+      {/* 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -114,19 +149,10 @@ export default function AboutPage() {
                 <div className="w-24 h-1 bg-green-600 mx-auto lg:mx-0 mb-8"></div>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold text-green-600">Mr. Olusile Adekunle</h3>
+                  <h3 className="text-2xl font-semibold text-green-600">CEO Name</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    A visionary leader with over 15 years of experience in agricultural innovation and sustainable development. Mr. Adekunle founded Dara-Manihot with the mission to revolutionize Africa&apos;s agricultural sector through clean technologies and circular economy principles.
+                    CEO biography and achievements will be added here.
                   </p>
-                  {/* <p className="text-lg text-muted-foreground leading-relaxed">
-                    [This section will be updated with detailed biography and achievements of Mr. Olusile Adekunle]
-                  </p> */}
-
-                  <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                    <Badge variant="outline" className="text-green-600 border-green-600">Agricultural Innovation</Badge>
-                    <Badge variant="outline" className="text-blue-600 border-blue-600">Clean Technology</Badge>
-                    <Badge variant="outline" className="text-yellow-600 border-yellow-600">Leadership</Badge>
-                  </div>
                 </div>
               </div>
             </FadeInLeft>
@@ -135,11 +161,16 @@ export default function AboutPage() {
               <div className="flex justify-center">
                 <Card className="p-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950 border-green-200 dark:border-green-800">
                   <div className="text-center">
-                    {/* Placeholder for founder's image */}
-                    <div className="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900 dark:to-blue-900 rounded-full flex items-center justify-center border-4 border-green-200 dark:border-green-700">
-                      <Users className="h-24 w-24 text-green-600" />
+                    <div className="w-64 h-64 mx-auto mb-6 relative rounded-full overflow-hidden border-4 border-green-200 dark:border-green-700 shadow-lg">
+                      <Image
+                        src="/ceo.jpg"
+                        alt="CEO - Founder & CEO"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 256px, 256px"
+                        priority
+                      />
                     </div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">Mr. Olusile Adekunle</h4>
                     <p className="text-muted-foreground">Founder & CEO</p>
                     <p className="text-sm text-muted-foreground mt-2">Dara-Manihot Industries & Farms</p>
                   </div>
@@ -149,6 +180,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Company Mission & Vision */}
       <section className="py-20 bg-muted/30">
