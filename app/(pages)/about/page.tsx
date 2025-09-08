@@ -21,7 +21,7 @@ import {
   Leaf
 } from 'lucide-react'
 import { CORE_VALUES } from '@/lib/constants'
-import Image from 'next/image'
+/*import Image from 'next/image'*/
 
 const companyMilestones = [
   {
